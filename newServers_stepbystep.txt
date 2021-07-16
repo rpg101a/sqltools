@@ -1,0 +1,19 @@
+create HIVE web site under wwwroot on c drive
+install self signed cert
+install web management service on server roles
+install Web deploy from https://www.iis.net/downloads/microsoft/web-deploy
+make sure service is running
+enable management remote connections on IIS
+power shell Install-WindowsFeature Web-Asp-Net45
+add windows authentication to IIS
+copy file folder
+install url rewrite module https://www.iis.net/downloads/microsoft/url-rewrite
+
+database:
+
+grant select,delete,update,insert on schema::HR to "clsnet\s-pharmatechprodsrv"
+grant select,delete,update,insert on schema::DBO to "clsnet\s-pharmatechprodsrv"
+grant select,delete,update,insert on schema::PTS to "clsnet\s-pharmatechprodsrv"
+
+grant execute to "clsnet\s-pharmatechprodsrv"
+

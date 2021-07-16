@@ -1,0 +1,9 @@
+Update-Package –reinstall
+
+dotnet nuget locals all --clear
+
+Update-Package -safe -reinstall -IgnoreDependencies
+Install-Package Microsoft.AspNet.Mvc -Version 5.2.3.0
+
+tf destroy $/Hive/2.9.0 
+
